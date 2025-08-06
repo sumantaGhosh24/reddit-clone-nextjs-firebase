@@ -58,7 +58,7 @@ const MyCommunities = () => {
             {community.map((c) => (
               <DropdownMenuItem key={c.id}>
                 <Link href={`/r/${c.id}`} className="w-full">
-                  r/{c.title}
+                  r/{c.title.substring(0, 10)}...
                 </Link>
               </DropdownMenuItem>
             ))}

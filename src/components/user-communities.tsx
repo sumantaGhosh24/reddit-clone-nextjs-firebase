@@ -57,7 +57,7 @@ export default function UserCommunities({username}: {username: string}) {
       <div className="flex flex-col gap-3">
         {community &&
           community.map((c) => (
-            <div key={c.id}>
+            <div key={c.id} className="bg-gray-200 p-2 rounded">
               <Link href={`/r/${c.id}`} className="w-full">
                 r/{c.title}
               </Link>

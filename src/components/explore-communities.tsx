@@ -55,10 +55,12 @@ export default function ExploreCommunities() {
                 href={`/r/${com.id}`}
                 className="text-base font-medium hover:underline"
               >
-                r/{com.title}
+                r/{com.title.substring(0, 10)}...
               </Link>
             </div>
-            <p className="text-sm text-muted-foreground">{com.description}</p>
+            <p className="text-sm text-muted-foreground">
+              {com.description.substring(0, 20)}...
+            </p>
             <p className="text-sm">{com.members.length || 0} members</p>
           </div>
         ))}
